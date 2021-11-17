@@ -11,10 +11,19 @@ app.use(morgan('dev'))
 app.use(cors())
 
 const PORT = process.env.PORT || 5000
+
+// if (process.env.PORT === "production") {
+//     app.use(express.static("build"));
+//     app.get("*", (req, res) => {
+//       res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+//     });
+//   }
+
+
 const DB_URL = "mongodb+srv://instagram1:instagram1@cluster0.dew7w.mongodb.net/instagram1?retryWrites=true&w=majority";
 
 app.use(express.json())
-app.use('/api', router)
+app.use('/', router)
 
 
 async function startApp() {
