@@ -7,7 +7,6 @@ class PostService {
             throw new Error('не указан ID')
         }
         const post = await User.findById(_id);
-        console.log("PSTTTT -", post);
         return post;
     }
     async update(user) {
@@ -18,7 +17,7 @@ class PostService {
             "message": user.message,
             "urlUser": user.urlUser
         }
-     console.log("Новый объект", userMessage);
+
     if (!user._id) {
         throw new Error('не указан ID')
         }  

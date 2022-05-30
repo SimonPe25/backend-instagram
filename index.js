@@ -11,9 +11,6 @@ app.use(morgan('dev'))
 app.use(cors())
 
 const PORT = process.env.PORT || 5000
-
- //const DB_URL = "mongodb+srv://instagram1:instagram1@cluster0.dew7w.mongodb.net/instagram1?retryWrites=true&w=majority";
-//const DB_URL = "mongodb+srv://SImon:persitka05@cluster0.6gwco.mongodb.net/?retryWrites=true&w=majority"
 const DB_URL = "mongodb+srv://simon:987654321@cluster0.8pv5z.mongodb.net/IntagramDB?retryWrites=true&w=majority"
 
 
