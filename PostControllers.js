@@ -1,11 +1,11 @@
 import PostService from "./PostService.js"
-import User from "./User.js";
+import users from "./User.js";
 
 class PostController {
      async getAll (req, res) {
         try {
-            const users = await User.find()
-            return res.json(users)
+            const user = await users.find()
+            return res.json(user)
             
         } catch (e) {
             res.status (500).json(e)
